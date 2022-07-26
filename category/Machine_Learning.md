@@ -2,6 +2,6 @@
 
 layout: category
 
-title : 'Ai_tech'
+title : 'Machine_Learning'
 
 ---
