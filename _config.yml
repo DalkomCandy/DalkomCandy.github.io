@@ -49,10 +49,20 @@ plainwhite:
 # this and add the path to the pages in order as they should show up
 #header_pages:
 # - about.md
-
+# Configure the plugin here
+category_path: "category" # <- default value
+category_layout: "category.html" # <- default value
 # Build settings
-theme: plainwhite
+# theme: plainwhite
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
