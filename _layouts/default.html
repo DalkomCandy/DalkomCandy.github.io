@@ -3,6 +3,7 @@
 
 <head>
   {%- include head.html -%}
+  <meta name="google-site-verification" content="-HLJ8fQONaYmTqdQ7HTr30-4u0-HtNT2aNgYd1WZgDc" />
 </head>
 
 {%- if site.plainwhite.condensed_mobile contains page.layout -%}
@@ -10,6 +11,10 @@
 {% else %}
 {% assign condensed_class = "" %}
 {%- endif -%}
+
+{% if page.use_math %}
+    {% include mathjax_support.html %}
+{% endif %}
 
 <body>
   <main class="container">
@@ -140,7 +145,7 @@
         <ul>
           {% for link in site.plainwhite.navigation %}
           <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
+            <a href="{{ link.url }}" class="ctext">{{ link.title }}</a>
           </li>
           {% endfor %}
         </ul>
